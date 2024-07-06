@@ -1,17 +1,14 @@
-import { Avatar, Box, Divider, Grid, Typography } from '@mui/material'
+import { Divider, Grid, Typography } from '@mui/material'
 import { useStyles } from './style'
 import { NavLink } from 'react-router-dom'
+import { Avatar } from '../../components/Avatar'
 
 export function Sidebar() {
   const { classes } = useStyles()
   return (
     <Grid container className={classes.mainContainer}>
       <Grid container item className={classes.profilePhoto}>
-        <Avatar
-          alt='Remy Sharp'
-          src='https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-          className={classes.avatar}
-        />
+        <Avatar className={classes.avatar} />
       </Grid>
       <Typography className={classes.name}>Vikas Niranjan</Typography>
       <Divider className={classes.divider} />

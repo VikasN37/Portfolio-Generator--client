@@ -1,28 +1,25 @@
 import { useLocation } from 'react-router-dom'
 
-export function getActivePage(setActive: React.Dispatch<React.SetStateAction<number>>) {
+export function getActivePage(): number {
   const activeTab = useLocation()
   console.log(activeTab.pathname)
-
+  let x = 0
   switch (activeTab.pathname) {
-    case '/portfolio':
-      setActive[0]
+    case '/portfolio/about':
+      x = 0
       break
 
-    case '/about':
-      setActive[1]
+    case '/portfolio/skills':
+      x = 1
       break
 
-    case '/skills':
-      setActive[2]
+    case '/portfolio/projects':
+      x = 2
       break
 
-    case '/projects':
-      setActive[3]
-      break
-
-    case '/contact':
-      setActive[4]
+    case '/portfolio/contact':
+      x = 3
       break
   }
+  return x
 }
